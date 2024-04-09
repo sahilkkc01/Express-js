@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const phone = require('./data');
 
 const app = express();
 
@@ -27,6 +28,12 @@ app.get('/jsonex',(req,res)=>{
         "name":"Rajan"
          },
     ])
+})
+
+//data.js data
+app.get('/data',(req,res)=>{
+    //import phone from ./data.js
+    res.json(phone)
 })
 
 app.listen(3000,()=>{
